@@ -11,3 +11,13 @@ function mySetInterval(callback,delay){
 function myClearInterval(id){
     clearTimeout(id);
 }
+
+
+const interval = mySetInterval(()=>{
+    console.log("Runing..");
+},1000);
+
+setTimeout(()=>{
+   myClearInterval(id);
+   console.log("Stopped");
+},5000);

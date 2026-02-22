@@ -30,3 +30,9 @@ function createBankAccount(){
         }
     };
 }
+
+const acc = createBankAccount();
+acc.deposit(1000);
+acc.withdraw(400);
+console.log(acc.getBalance());
+console.log(acc.getTransactionHistory());

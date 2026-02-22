@@ -14,3 +14,10 @@ function rateLimiter(limit,interval){
         }
     };
 }
+
+const limiter = rateLimiter(3,5000);
+
+console.log(limiter());
+console.log(limiter());
+console.log(limiter());
+console.log(limiter());

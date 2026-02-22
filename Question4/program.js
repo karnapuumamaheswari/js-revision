@@ -18,3 +18,14 @@ function runSequential(tasks,delay){
         next();
     });
 }
+
+const tasks = [
+    () => Promise.resolve("Task 1"),
+    () => Promise.resolve("Task 2"),
+    () => Promise.resolve("Task 3")
+
+];
+
+runSequential(tasks,1000)
+.then(console.log)
+.catch(console.error);

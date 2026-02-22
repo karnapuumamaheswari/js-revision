@@ -3,7 +3,7 @@ function createCountdown(seconds,onTrick,onComplete){
     let timer = null;
     let paused = false;
 
-    function startTransition(){
+    function start(){
 
         timer = setInterval(()=>{
             if(!paused){
@@ -28,3 +28,10 @@ function createCountdown(seconds,onTrick,onComplete){
 
     return {pause,resume};
 }
+
+
+const timer = createCountdown(
+    5,
+    (t) => console.log(t),
+    () => console.log("Done")
+);
